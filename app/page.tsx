@@ -234,7 +234,7 @@ export default function Home() {
               className="hero-contact-row"
               style={{
                 marginTop: 40,
-                paddingTop: 14,
+                paddingTop: 22,
                 borderTop: "1px solid #DEDEDE",
                 display: "flex",
                 flexWrap: "wrap",
