@@ -190,7 +190,9 @@ export default function Home() {
               >
                 AI 서비스를
                 <br />
-                혼자 끝까지
+                혼자
+                <br />
+                끝까지
                 <br />
                 만듭니다
               </h1>
@@ -199,7 +201,7 @@ export default function Home() {
                   display: "flex",
                   flexDirection: "column",
                   gap: 14,
-                  marginTop: "calc(clamp(36px,6.6vw,68px) * .95)",
+                  marginTop: "calc(clamp(36px,6.6vw,68px) * .95 * 2)",
                 }}
               >
                 <ImageBox
