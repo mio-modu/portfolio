@@ -233,8 +233,8 @@ export default function Home() {
             <div
               className="hero-contact-row"
               style={{
-                marginTop: 40,
-                paddingTop: 22,
+                marginTop: 56,
+                paddingTop: 32,
                 borderTop: "1px solid #DEDEDE",
                 display: "flex",
                 flexWrap: "wrap",
