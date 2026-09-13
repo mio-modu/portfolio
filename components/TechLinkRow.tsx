@@ -28,7 +28,9 @@ export default function TechLinkRow({ tech, href, label }: TechLinkRowProps) {
         }}
       >
         {tech.map((t) => (
-          <span key={t}>{t}</span>
+          <span key={t} style={{ whiteSpace: "nowrap" }}>
+            {t}
+          </span>
         ))}
       </div>
       <a

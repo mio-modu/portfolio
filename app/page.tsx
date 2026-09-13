@@ -126,7 +126,7 @@ export default function Home() {
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
         {/* Screen 1 — Hero */}
         <ScreenSection>
-          <header style={{ paddingTop: 64 }}>
+          <header style={{ paddingTop: 40 }}>
             <div
               style={{
                 display: "flex",
@@ -174,16 +174,16 @@ export default function Home() {
               className="stack-mobile"
               style={{
                 display: "grid",
-                gridTemplateColumns: "minmax(0,7fr) minmax(0,4fr)",
-                gap: "56px 64px",
+                gridTemplateColumns: "minmax(0,8.5fr) minmax(0,2.5fr)",
+                gap: "40px 48px",
                 alignItems: "end",
               }}
             >
               <h1
                 style={{
                   fontWeight: 800,
-                  fontSize: "clamp(44px,9.4vw,132px)",
-                  lineHeight: 0.92,
+                  fontSize: "clamp(36px,6.6vw,68px)",
+                  lineHeight: 0.95,
                   letterSpacing: "-.045em",
                   margin: 0,
                 }}
@@ -195,7 +195,7 @@ export default function Home() {
                 만듭니다
               </h1>
               <div
-                style={{ display: "flex", flexDirection: "column", gap: 32 }}
+                style={{ display: "flex", flexDirection: "column", gap: 14 }}
               >
                 <ImageBox
                   src="/img/hero-slab.jpg"
@@ -206,8 +206,8 @@ export default function Home() {
                 <p
                   style={{
                     fontWeight: 400,
-                    fontSize: 19,
-                    lineHeight: 1.75,
+                    fontSize: 15,
+                    lineHeight: 1.6,
                     margin: 0,
                     color: "#1F1F1F",
                   }}
@@ -220,8 +220,8 @@ export default function Home() {
 
             <div
               style={{
-                marginTop: 96,
-                paddingTop: 20,
+                marginTop: 40,
+                paddingTop: 14,
                 borderTop: "1px solid #DEDEDE",
                 display: "flex",
                 flexWrap: "wrap",
@@ -368,12 +368,50 @@ export default function Home() {
             title="웹사이트 제작"
             desc="실제 운영 3종 · 비영리·공공기관 시안 4종"
             image={
-              <ImageBox
-                src="/img/site-qsarang.png"
-                alt="큐사랑 · 우아한한복 · 그린브라우니"
-                fit="cover"
-                containerStyle={{ width: "100%", aspectRatio: "16/7" }}
-              />
+              <div
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/7",
+                  background: "#F0F0F0",
+                  display: "flex",
+                  gap: 2,
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src="/img/site-qsarang.png"
+                  alt="큐사랑"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+                <img
+                  src="/img/site-hanbok.png"
+                  alt="우아한한복대여점"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+                <img
+                  src="/img/site-brownie.png"
+                  alt="그린브라우니"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+              </div>
             }
           />
         </ScreenSection>

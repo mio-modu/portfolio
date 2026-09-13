@@ -242,9 +242,9 @@ export default function WebsitesPage() {
                 color: "#555555",
               }}
             >
-              <span>NEXT.JS</span>
-              <span>VERCEL</span>
-              <span>기획 · 제작 · 납품</span>
+              <span style={{ whiteSpace: "nowrap" }}>NEXT.JS</span>
+              <span style={{ whiteSpace: "nowrap" }}>VERCEL</span>
+              <span style={{ whiteSpace: "nowrap" }}>기획 · 제작 · 납품</span>
             </div>
             <div
               style={{
@@ -340,7 +340,7 @@ export default function WebsitesPage() {
                 color: "#555555",
               }}
             >
-              <span>NEXT.JS</span>
+              <span style={{ whiteSpace: "nowrap" }}>NEXT.JS</span>
             </div>
             <a
               href="https://foundation-site-eight.vercel.app/"
