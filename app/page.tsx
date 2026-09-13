@@ -4,11 +4,11 @@ import ImageBox from "@/components/ImageBox";
 import Footer from "@/components/Footer";
 
 const ALSO_ITEMS = [
-  "교육기관 모집요강 페이지 배열·표 처리 규칙·목차 구조 설계 (리뷰 평점 5.0/5.0)",
-  "ERP·전표 시스템 API 연동, Python 스케줄러 기반 업무 자동화 설계",
-  "스마트공장 IoT 콜드체인 관제 시스템 웹·서버 파트 구축 제안",
-  "Airtable·구글시트 연동 재고·발주 자동화, 바코드 라벨 파이프라인 설계",
-  "위시켓·원티드긱스에 포트폴리오 등록해 프로젝트 진행 중 · 숨고·크몽 등록",
+  ["교육기관 모집요강 페이지 배열·표 처리 규칙·목차 구조 설계", "(리뷰 평점 5.0/5.0)"],
+  ["ERP·전표 시스템 API 연동,", "Python 스케줄러 기반 업무 자동화 설계"],
+  ["스마트공장 IoT 콜드체인 관제 시스템 웹·서버 파트 구축 제안"],
+  ["Airtable·구글시트 연동 재고·발주 자동화,", "바코드 라벨 파이프라인 설계"],
+  ["위시켓·원티드긱스에 포트폴리오 등록해 프로젝트 진행 중", "· 숨고·크몽 등록"],
 ];
 
 function ScreenSection({
@@ -126,7 +126,7 @@ export default function Home() {
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
         {/* Screen 1 — Hero */}
         <ScreenSection>
-          <header style={{ paddingTop: 40 }}>
+          <header className="hero-header" style={{ paddingTop: 40 }}>
             <div
               style={{
                 display: "flex",
@@ -445,7 +445,10 @@ export default function Home() {
                 maxWidth: 800,
               }}
             >
-              수학교육을 전공하고, AI 서비스 기획·개발자로 방향을 잡았습니다.
+              수학교육을 전공하고,
+              <br />
+              AI 서비스 기획·개발자로 방향을 잡았습니다.
+              <br />
               포트폴리오에 프로젝트로 담지 않은 영역도 함께 진행하고
               있습니다.
             </p>
@@ -456,9 +459,9 @@ export default function Home() {
                 gap: 16,
               }}
             >
-              {ALSO_ITEMS.map((item) => (
+              {ALSO_ITEMS.map((lines) => (
                 <p
-                  key={item}
+                  key={lines[0]}
                   style={{
                     margin: 0,
                     fontWeight: 400,
@@ -469,7 +472,12 @@ export default function Home() {
                     maxWidth: 800,
                   }}
                 >
-                  {item}
+                  {lines.map((line, i) => (
+                    <span key={line}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
                 </p>
               ))}
             </div>
