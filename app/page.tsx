@@ -195,7 +195,12 @@ export default function Home() {
                 만듭니다
               </h1>
               <div
-                style={{ display: "flex", flexDirection: "column", gap: 14 }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 14,
+                  marginTop: "calc(clamp(36px,6.6vw,68px) * .95)",
+                }}
               >
                 <ImageBox
                   src="/img/hero-slab.jpg"
