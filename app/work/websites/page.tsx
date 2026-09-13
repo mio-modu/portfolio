@@ -5,9 +5,9 @@ import ImageBox from "@/components/ImageBox";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "홈페이지 제작",
+  title: "웹사이트 제작",
   openGraph: {
-    title: "홈페이지 제작",
+    title: "웹사이트 제작",
     images: ["/img/site-qsarang.png"],
   },
 };
@@ -42,6 +42,52 @@ const SITES = [
   },
 ];
 
+const CONCEPTS = [
+  {
+    src: "/img/found-a-public.png",
+    alt: "공공기관",
+    label: "A — 공공기관",
+    desc: "민원·공고 중심. 자주 찾는 서비스와 대표전화를 상단 가까이 올린 구성.",
+  },
+  {
+    src: "/img/found-b-foundation.png",
+    alt: "문화재단",
+    label: "B — 문화재단",
+    desc: "지원 실적을 수치로 먼저 보여주고, 지원사업을 사례 단위로 펼친 구성.",
+  },
+  {
+    src: "/img/found-c-nonprofit.png",
+    alt: "비영리단체",
+    label: "C — 비영리단체",
+    desc: "후원 전환이 목적. 모금 현황과 후원금 사용처를 같은 화면에서 확인.",
+  },
+  {
+    src: "/img/found-d-culture.png",
+    alt: "공공문화재단",
+    label: "D — 공공문화재단",
+    desc: "전시·공연 편집 콘텐츠를 전면에 둔 다크 톤 매거진형 구성.",
+  },
+];
+
+function SectionLabel({ children }: { children: string }) {
+  return (
+    <div
+      style={{
+        fontSize: 11,
+        fontWeight: 500,
+        letterSpacing: ".42em",
+        textTransform: "uppercase",
+        color: "#8A8A8A",
+        paddingBottom: 18,
+        borderBottom: "1px solid #0A0A0A",
+        marginBottom: 40,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function WebsitesPage() {
   return (
     <div
@@ -54,7 +100,7 @@ export default function WebsitesPage() {
       }}
     >
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
-        <DetailHeader label="04 / CLIENT WORK" />
+        <DetailHeader label="04 / WEB" />
 
         <section style={{ paddingTop: 120 }}>
           <h1
@@ -66,7 +112,7 @@ export default function WebsitesPage() {
               margin: "0 0 40px",
             }}
           >
-            홈페이지 제작
+            웹사이트 제작
           </h1>
           <p
             style={{
@@ -79,6 +125,21 @@ export default function WebsitesPage() {
               maxWidth: 720,
             }}
           >
+            소규모 사업장부터 비영리단체·공공기관까지, 대상과 목적에 맞춰
+            웹사이트를 기획·제작했습니다.
+          </p>
+
+          <SectionLabel>01 — 실제 운영 3종</SectionLabel>
+          <p
+            style={{
+              margin: "-16px 0 64px",
+              fontWeight: 400,
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "#222222",
+              maxWidth: 680,
+            }}
+          >
             소규모 사업장을 대상으로 홈페이지를 기획·제작해 납품했습니다.
             업종에 맞춰 첫 화면에서 무엇을 보여줄지부터 다르게 설계했습니다.
           </p>
@@ -88,7 +149,7 @@ export default function WebsitesPage() {
               display: "flex",
               flexDirection: "column",
               gap: 96,
-              marginBottom: 96,
+              marginBottom: 64,
             }}
           >
             {SITES.map((site) => (
@@ -167,6 +228,7 @@ export default function WebsitesPage() {
               gap: "20px 40px",
               paddingTop: 18,
               borderTop: "1px solid #0A0A0A",
+              marginBottom: 96,
             }}
           >
             <div
@@ -196,11 +258,109 @@ export default function WebsitesPage() {
               3 SITES · 운영 중
             </div>
           </div>
+
+          <SectionLabel>02 — 시안 4종</SectionLabel>
+          <p
+            style={{
+              margin: "-16px 0 64px",
+              fontWeight: 400,
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "#222222",
+              maxWidth: 680,
+            }}
+          >
+            비영리단체·공공기관을 대상으로 웹사이트 메인 시안 4종을 자체
+            기획·제작했습니다. 기관 성격에 따라 톤과 정보 구조를 다르게
+            설계했습니다.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+              gap: "48px 24px",
+              marginBottom: 96,
+            }}
+          >
+            {CONCEPTS.map((c) => (
+              <div
+                key={c.label}
+                style={{ display: "flex", flexDirection: "column", gap: 16 }}
+              >
+                <ImageBox
+                  src={c.src}
+                  alt={c.alt}
+                  fit="contain"
+                  containerStyle={{ width: "100%", aspectRatio: "3/5" }}
+                />
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 500,
+                    letterSpacing: ".18em",
+                    color: "#555555",
+                  }}
+                >
+                  {c.label}
+                </div>
+                <p
+                  style={{
+                    margin: 0,
+                    fontWeight: 400,
+                    fontSize: 15,
+                    lineHeight: 1.8,
+                    color: "#222222",
+                  }}
+                >
+                  {c.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              gap: "20px 40px",
+              paddingTop: 18,
+              borderTop: "1px solid #0A0A0A",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "10px 20px",
+                fontSize: 12,
+                fontWeight: 400,
+                letterSpacing: ".18em",
+                color: "#555555",
+              }}
+            >
+              <span>NEXT.JS</span>
+            </div>
+            <a
+              href="https://foundation-site-eight.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              style={{
+                fontSize: 15,
+                fontWeight: 500,
+                letterSpacing: ".02em",
+                whiteSpace: "nowrap",
+              }}
+            >
+              foundation-site-eight.vercel.app ↗
+            </a>
+          </div>
         </section>
 
         <DetailNav
           prev={{ href: "/work/gamsadam", label: "← 이전 · 감사담" }}
-          next={{ href: "/work/foundation", label: "다음 · 시안 4종 →" }}
+          next={{ href: "/", label: "전체 목록 →" }}
         />
 
         <Footer marginTop={140} />
