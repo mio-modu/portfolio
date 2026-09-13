@@ -171,7 +171,7 @@ export default function Home() {
             }}
           >
             <div
-              className="stack-mobile"
+              className="stack-mobile hero-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "minmax(0,8.5fr) minmax(0,2.5fr)",
@@ -201,6 +201,7 @@ export default function Home() {
                   src="/img/hero-slab.jpg"
                   alt="히어로 이미지"
                   fit="cover"
+                  className="hero-image-box"
                   containerStyle={{ width: "100%", aspectRatio: "3/4" }}
                 />
                 <p
@@ -219,6 +220,7 @@ export default function Home() {
             </div>
 
             <div
+              className="hero-contact-row"
               style={{
                 marginTop: 40,
                 paddingTop: 14,
@@ -232,7 +234,7 @@ export default function Home() {
                 color: "#333333",
               }}
             >
-              <span style={{ whiteSpace: "nowrap" }}>010-3943-9929</span>
+              <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
               <a
                 href="mailto:lumain747@gmail.com"
                 style={{ color: "#333333", whiteSpace: "nowrap" }}

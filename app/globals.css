@@ -11,6 +11,8 @@ body {
 
 body {
   -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -34,5 +36,42 @@ img {
 @media (max-width: 720px) {
   .stack-mobile {
     grid-template-columns: 1fr !important;
+  }
+
+  .hero-grid {
+    gap: 20px 48px !important;
+  }
+
+  .hero-image-box {
+    aspect-ratio: 16/9 !important;
+  }
+
+  .hero-contact-row {
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+  }
+
+  .fan-wrap {
+    height: 220px !important;
+  }
+
+  .fan-wrap > div {
+    width: 104px !important;
+  }
+
+  .fan-wrap > div:nth-child(1) {
+    transform: translateX(calc(-50% + -73px)) rotate(-10.5deg) !important;
+  }
+
+  .fan-wrap > div:nth-child(2) {
+    transform: translateX(calc(-50% + -24px)) rotate(-3.5deg) !important;
+  }
+
+  .fan-wrap > div:nth-child(3) {
+    transform: translateX(calc(-50% + 24px)) rotate(3.5deg) !important;
+  }
+
+  .fan-wrap > div:nth-child(4) {
+    transform: translateX(calc(-50% + 73px)) rotate(10.5deg) !important;
   }
 }

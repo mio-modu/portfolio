@@ -146,9 +146,40 @@ export default function WebsitesPage() {
 
           <div
             style={{
+              position: "relative",
+              marginBottom: 56,
+            }}
+          >
+            {SITES.map((site, i) => (
+              <div
+                key={site.name}
+                style={{
+                  display: "flex",
+                  justifyContent: i % 2 === 0 ? "flex-start" : "flex-end",
+                  marginTop: i === 0 ? 0 : "-11%",
+                  position: "relative",
+                  zIndex: i + 1,
+                }}
+              >
+                <ImageBox
+                  src={site.src}
+                  alt={site.alt}
+                  fit="cover"
+                  containerStyle={{
+                    width: "64%",
+                    aspectRatio: "16/10",
+                    boxShadow: "0 24px 48px rgba(10,10,10,.18)",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
               display: "flex",
               flexDirection: "column",
-              gap: 96,
+              gap: 24,
               marginBottom: 64,
             }}
           >
@@ -158,64 +189,57 @@ export default function WebsitesPage() {
                 className="stack-mobile"
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "minmax(0,7fr) minmax(0,5fr)",
-                  gap: "32px 48px",
-                  alignItems: "start",
+                  gridTemplateColumns: "minmax(0,3fr) minmax(0,6fr) minmax(0,3fr)",
+                  gap: "8px 24px",
+                  alignItems: "baseline",
+                  paddingTop: 16,
+                  borderTop: "1px solid #DEDEDE",
                 }}
               >
-                <ImageBox
-                  src={site.src}
-                  alt={site.alt}
-                  fit="cover"
-                  containerStyle={{ width: "100%", aspectRatio: "16/10" }}
-                />
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 400,
+                    letterSpacing: ".2em",
+                    color: "#666666",
+                  }}
+                >
+                  {site.label}
+                </div>
                 <div>
-                  <div
-                    style={{
-                      fontSize: 12,
-                      fontWeight: 400,
-                      letterSpacing: ".24em",
-                      color: "#666666",
-                      marginBottom: 16,
-                    }}
-                  >
-                    {site.label}
-                  </div>
-                  <div
+                  <span
                     style={{
                       fontWeight: 800,
-                      fontSize: "clamp(26px,3.4vw,40px)",
-                      lineHeight: 1.05,
-                      letterSpacing: "-.035em",
-                      marginBottom: 20,
+                      fontSize: 19,
+                      letterSpacing: "-.03em",
+                      marginRight: 12,
                     }}
                   >
                     {site.name}
-                  </div>
-                  <p
+                  </span>
+                  <span
                     style={{
-                      margin: "0 0 24px",
                       fontWeight: 400,
-                      fontSize: 16,
-                      lineHeight: 1.8,
-                      color: "#222222",
+                      fontSize: 15,
+                      lineHeight: 1.7,
+                      color: "#333333",
                     }}
                   >
                     {site.desc}
-                  </p>
-                  <a
-                    href={site.href}
-                    target="_blank"
-                    rel="noopener"
-                    style={{
-                      fontSize: 14,
-                      fontWeight: 500,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {site.linkLabel} ↗
-                  </a>
+                  </span>
                 </div>
+                <a
+                  href={site.href}
+                  target="_blank"
+                  rel="noopener"
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 500,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {site.linkLabel} ↗
+                </a>
               </div>
             ))}
           </div>
@@ -276,30 +300,64 @@ export default function WebsitesPage() {
           </p>
 
           <div
+            className="fan-wrap"
+            style={{
+              position: "relative",
+              height: 340,
+              marginBottom: 64,
+            }}
+          >
+            {CONCEPTS.map((c, i) => {
+              const mid = (CONCEPTS.length - 1) / 2;
+              const step = i - mid;
+              return (
+                <div
+                  key={c.label}
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    bottom: 0,
+                    width: 168,
+                    transformOrigin: "bottom center",
+                    transform: `translateX(calc(-50% + ${step * 118}px)) rotate(${step * 7}deg)`,
+                    zIndex: i,
+                    boxShadow: "0 20px 40px rgba(10,10,10,.16)",
+                  }}
+                >
+                  <ImageBox
+                    src={c.src}
+                    alt={c.alt}
+                    fit="contain"
+                    containerStyle={{ width: "100%", aspectRatio: "3/5" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-              gap: "48px 24px",
+              gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+              gap: "24px 24px",
               marginBottom: 96,
             }}
           >
             {CONCEPTS.map((c) => (
               <div
                 key={c.label}
-                style={{ display: "flex", flexDirection: "column", gap: 16 }}
+                style={{
+                  paddingTop: 14,
+                  borderTop: "1px solid #DEDEDE",
+                }}
               >
-                <ImageBox
-                  src={c.src}
-                  alt={c.alt}
-                  fit="contain"
-                  containerStyle={{ width: "100%", aspectRatio: "3/5" }}
-                />
                 <div
                   style={{
                     fontSize: 12,
                     fontWeight: 500,
                     letterSpacing: ".18em",
                     color: "#555555",
+                    marginBottom: 10,
                   }}
                 >
                   {c.label}

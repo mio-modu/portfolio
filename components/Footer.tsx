@@ -38,7 +38,7 @@ export default function Footer({ marginTop, showName = false }: FooterProps) {
           alignSelf: "end",
         }}
       >
-        <span style={{ whiteSpace: "nowrap" }}>010-3943-9929</span>
+        <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
         <a
           href="mailto:lumain747@gmail.com"
           style={{ color: "#333333", whiteSpace: "nowrap" }}

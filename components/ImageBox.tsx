@@ -5,6 +5,7 @@ type ImageBoxProps = {
   alt: string;
   fit?: "cover" | "contain";
   containerStyle: CSSProperties;
+  className?: string;
 };
 
 export default function ImageBox({
@@ -12,9 +13,13 @@ export default function ImageBox({
   alt,
   fit = "cover",
   containerStyle,
+  className,
 }: ImageBoxProps) {
   return (
-    <div style={{ background: "#F0F0F0", ...containerStyle }}>
+    <div
+      className={className}
+      style={{ background: "#F0F0F0", overflow: "hidden", ...containerStyle }}
+    >
       {src ? (
         <img
           src={src}
