@@ -171,7 +171,7 @@ export default function Home() {
             }}
           >
             <div
-              className="stack-mobile hero-grid"
+              className="hero-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "minmax(0,8.5fr) minmax(0,2.5fr)",
