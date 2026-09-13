@@ -176,7 +176,7 @@ export default function Home() {
                 display: "grid",
                 gridTemplateColumns: "minmax(0,6fr) minmax(0,4fr)",
                 gap: "40px 48px",
-                alignItems: "end",
+                alignItems: "start",
               }}
             >
               <h1
