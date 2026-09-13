@@ -43,7 +43,7 @@ img {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) !important;
+    grid-template-columns: minmax(0, 3.5fr) minmax(0, 5.5fr) !important;
     gap: 8px 16px !important;
   }
 

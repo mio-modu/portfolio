@@ -174,7 +174,7 @@ export default function Home() {
               className="hero-grid"
               style={{
                 display: "grid",
-                gridTemplateColumns: "minmax(0,8.5fr) minmax(0,2.5fr)",
+                gridTemplateColumns: "minmax(0,6fr) minmax(0,4fr)",
                 gap: "40px 48px",
                 alignItems: "end",
               }}
@@ -202,7 +202,11 @@ export default function Home() {
                   alt="히어로 이미지"
                   fit="cover"
                   className="hero-image-box"
-                  containerStyle={{ width: "100%", aspectRatio: "3/4" }}
+                  containerStyle={{
+                    width: "100%",
+                    aspectRatio: "3/4",
+                    boxShadow: "0 32px 64px rgba(10,10,10,.22)",
+                  }}
                 />
                 <p
                   style={{
