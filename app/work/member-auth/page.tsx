@@ -353,6 +353,8 @@ export default function MemberAuthPage() {
               "GITHUB",
               "VERCEL",
             ]}
+            href="https://member-auth-demo.vercel.app/"
+            label="member-auth-demo.vercel.app"
           />
         </section>
 
