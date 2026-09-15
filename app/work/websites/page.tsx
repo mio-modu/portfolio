@@ -418,7 +418,7 @@ export default function WebsitesPage() {
 
         <DetailNav
           prev={{ href: "/work/gamsadam", label: "← 이전 · 감사담" }}
-          next={{ href: "/", label: "전체 목록 →" }}
+          next={{ href: "/work/member-auth", label: "다음 · 자격 인증형 회원제 시스템 →" }}
         />
 
         <Footer marginTop={140} />

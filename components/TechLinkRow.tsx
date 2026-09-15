@@ -1,7 +1,7 @@
 type TechLinkRowProps = {
   tech: string[];
-  href: string;
-  label: string;
+  href?: string;
+  label?: string;
 };
 
 export default function TechLinkRow({ tech, href, label }: TechLinkRowProps) {
@@ -33,19 +33,21 @@ export default function TechLinkRow({ tech, href, label }: TechLinkRowProps) {
           </span>
         ))}
       </div>
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener"
-        style={{
-          fontSize: 15,
-          fontWeight: 500,
-          letterSpacing: ".02em",
-          whiteSpace: "nowrap",
-        }}
-      >
-        {label} ↗
-      </a>
+      {href && label ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          style={{
+            fontSize: 15,
+            fontWeight: 500,
+            letterSpacing: ".02em",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {label} ↗
+        </a>
+      ) : null}
     </div>
   );
 }
