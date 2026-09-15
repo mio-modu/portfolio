@@ -429,7 +429,24 @@ export default function Home() {
           />
         </ScreenSection>
 
-        {/* Screen 6 — Also + Footer */}
+        {/* Screen 6 — Work 05 */}
+        <ScreenSection>
+          <WorkItem
+            href="/work/member-auth"
+            label="05 / AUTH"
+            title="자격 인증형 회원제 시스템"
+            desc="전문직 대상 회원제의 자격 검증을 두 갈래 인증 경로로 구현한 데모"
+            image={
+              <ImageBox
+                alt="대표 화면"
+                fit="cover"
+                containerStyle={{ width: "100%", aspectRatio: "16/7" }}
+              />
+            }
+          />
+        </ScreenSection>
+
+        {/* Screen 7 — Also + Footer */}
         <ScreenSection gap={64}>
           <section>
             <div
