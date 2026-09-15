@@ -10,8 +10,29 @@ export const metadata: Metadata = {
   title: "자격 인증형 회원제 시스템",
   openGraph: {
     title: "자격 인증형 회원제 시스템",
+    images: ["/img/auth-main-hero.jpg"],
   },
 };
+
+const MAIN_SHOTS = [
+  { src: "/img/auth-main-hero.jpg", alt: "메인 랜딩 히어로", marginTop: 0 },
+  {
+    src: "/img/auth-main-services.jpg",
+    alt: "회원 인증 후 이용 가능한 자료",
+    marginTop: 44,
+  },
+  {
+    src: "/img/auth-main-tracks.jpg",
+    alt: "두 인증 경로 안내 카드",
+    marginTop: 88,
+  },
+];
+
+const FLOW_SHOTS = [
+  { src: "/img/auth-signup.jpg", alt: "회원가입 — 두 인증 경로 토글", marginTop: 0 },
+  { src: "/img/auth-member.jpg", alt: "회원 전용 페이지", marginTop: 44 },
+  { src: "/img/auth-showcase.jpg", alt: "쇼케이스 화면", marginTop: 88 },
+];
 
 const STEPS = [
   {
@@ -77,6 +98,39 @@ const STATUS_NOTES = [
   "로그인 보안 강화 — 비밀번호 · 2단계 인증",
   "Storage 접근 정책 고도화",
 ];
+
+function PhoneRow({
+  shots,
+}: {
+  shots: { src: string; alt: string; marginTop: number }[];
+}) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 16,
+        alignItems: "flex-start",
+        marginBottom: 96,
+      }}
+    >
+      {shots.map((shot) => (
+        <ImageBox
+          key={shot.src}
+          src={shot.src}
+          alt={shot.alt}
+          fit="cover"
+          containerStyle={{
+            flex: "1 1 200px",
+            minWidth: 150,
+            aspectRatio: "810/1480",
+            marginTop: shot.marginTop,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 function SectionLabel({ children }: { children: string }) {
   return (
@@ -153,15 +207,7 @@ export default function MemberAuthPage() {
             구현한 연습 프로젝트입니다.
           </p>
 
-          <ImageBox
-            alt="회원가입 화면 — 인증 경로 선택"
-            fit="cover"
-            containerStyle={{
-              width: "100%",
-              aspectRatio: "16/9",
-              marginBottom: 96,
-            }}
-          />
+          <PhoneRow shots={MAIN_SHOTS} />
 
           <CaseSection
             rows={[
@@ -277,15 +323,7 @@ export default function MemberAuthPage() {
             ))}
           </div>
 
-          <ImageBox
-            alt="관리자 승인 화면"
-            fit="cover"
-            containerStyle={{
-              width: "100%",
-              aspectRatio: "16/9",
-              marginBottom: 96,
-            }}
-          />
+          <PhoneRow shots={FLOW_SHOTS} />
 
           <SectionLabel>02 — 설계에서 다시 짚은 것</SectionLabel>
           <p
