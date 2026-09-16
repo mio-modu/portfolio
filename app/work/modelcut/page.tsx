@@ -78,7 +78,7 @@ export default function ModelcutPage() {
               },
               {
                 label: "결과",
-                text: "이미지 1건당 생성 원가 70~80원 수준까지 최적화.",
+                text: "이미지 1건당 생성 원가 50~60원 수준까지 최적화.",
               },
             ]}
           />
