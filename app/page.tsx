@@ -435,7 +435,7 @@ export default function Home() {
             href="/work/member-auth"
             label="05 / AUTH"
             title="자격 인증형 회원제 시스템"
-            desc="전문직 대상 회원제의 자격 검증을 두 갈래 인증 경로로 구현한 데모"
+            desc="면허·자격 보유자 회원제의 자격 검증을 두 갈래 인증 경로로 구현한 데모"
             image={
               <div
                 style={{
