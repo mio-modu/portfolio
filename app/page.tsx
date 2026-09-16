@@ -429,7 +429,49 @@ export default function Home() {
           />
         </ScreenSection>
 
-        {/* Screen 6 — Also + Footer */}
+        {/* Screen 6 — Work 05 */}
+        <ScreenSection>
+          <WorkItem
+            href="/work/member-auth"
+            label="05 / AUTH"
+            title="자격 인증형 회원제 시스템"
+            desc="전문직 대상 회원제의 자격 검증을 두 갈래 인증 경로로 구현한 데모"
+            image={
+              <div
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/7",
+                  background: "#F0F0F0",
+                  display: "flex",
+                  gap: 2,
+                  overflow: "hidden",
+                }}
+              >
+                {[
+                  ["/img/auth-main-hero.jpg", "메인 화면"],
+                  ["/img/auth-signup.jpg", "회원가입 — 두 인증 경로"],
+                  ["/img/auth-main-tracks.jpg", "인증 경로 안내"],
+                  ["/img/auth-member.jpg", "회원 전용 화면"],
+                ].map(([src, alt]) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt={alt}
+                    style={{
+                      flex: 1,
+                      minWidth: 0,
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                    }}
+                  />
+                ))}
+              </div>
+            }
+          />
+        </ScreenSection>
+
+        {/* Screen 7 — Also + Footer */}
         <ScreenSection gap={64}>
           <section>
             <div
