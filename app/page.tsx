@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import ImageBox from "@/components/ImageBox";
 import Footer from "@/components/Footer";
@@ -13,6 +13,19 @@ const TECH_STACK = [
   "PWA",
   "VERCEL",
 ];
+
+const APPROACH_STATS = [
+  { value: "3", label: "직접 만들어 운영 중인 서비스" },
+  { value: "13K+", label: "단독 개발 코드베이스 규모 (행)" },
+  { value: "2", label: "프로그램 저작권 등록" },
+  { value: "5.0", label: "외주 프로젝트 리뷰 평점 (만점)" },
+];
+
+const REVEAL_STYLE: CSSProperties = {
+  animation: "om-fade-up .9s cubic-bezier(.16,1,.3,1) both",
+  animationTimeline: "view()",
+  animationRange: "entry 0% cover 26%",
+} as CSSProperties;
 
 const ALSO_ITEMS = [
   ["교육기관 모집요강 페이지 배열·표 처리 규칙·목차 구조 설계 (리뷰 평점 5.0/5.0)"],
@@ -392,6 +405,90 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </ScreenSection>
+
+        {/* Screen 1.5 — Approach */}
+        <ScreenSection>
+          <section style={{ padding: "180px 28px", maxWidth: 1320, margin: "0 auto" }}>
+            <div data-reveal style={REVEAL_STYLE}>
+              <div
+                style={{
+                  fontSize: 11,
+                  fontWeight: 500,
+                  letterSpacing: ".42em",
+                  textTransform: "uppercase",
+                  color: "#8A8A92",
+                  paddingBottom: 18,
+                  borderBottom: "1px solid #0A0A0A",
+                  marginBottom: 56,
+                }}
+              >
+                Approach
+              </div>
+              <p
+                style={
+                  {
+                    margin: 0,
+                    fontWeight: 500,
+                    fontSize: "clamp(24px,4.2vw,58px)",
+                    lineHeight: 1.28,
+                    letterSpacing: "-.035em",
+                    maxWidth: 1000,
+                    textWrap: "pretty",
+                  } as CSSProperties
+                }
+              >
+                기획서에서 멈추지 않습니다. 화면을 그리고, 코드를 쓰고,
+                배포해서{" "}
+                <span style={{ color: "#9A9AA2" }}>
+                  실제로 돌아가는 서비스
+                </span>
+                까지 혼자 만듭니다.
+              </p>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+                gap: "40px 24px",
+                marginTop: 96,
+              }}
+            >
+              {APPROACH_STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  data-reveal
+                  style={{
+                    ...REVEAL_STYLE,
+                    paddingTop: 20,
+                    borderTop: "1px solid #DEDEDE",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontWeight: 800,
+                      fontSize: "clamp(34px,4vw,52px)",
+                      lineHeight: 1,
+                      letterSpacing: "-.04em",
+                      marginBottom: 14,
+                    }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 400,
+                      lineHeight: 1.7,
+                      color: "#555555",
+                    }}
+                  >
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
         </ScreenSection>
 
         {/* Screen 2 — Work 01 */}
