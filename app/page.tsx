@@ -3,6 +3,17 @@ import Link from "next/link";
 import ImageBox from "@/components/ImageBox";
 import Footer from "@/components/Footer";
 
+const TECH_STACK = [
+  "NEXT.JS",
+  "TYPESCRIPT",
+  "FASTAPI",
+  "SUPABASE",
+  "GEMINI API",
+  "CLAUDE API",
+  "PWA",
+  "VERCEL",
+];
+
 const ALSO_ITEMS = [
   ["교육기관 모집요강 페이지 배열·표 처리 규칙·목차 구조 설계 (리뷰 평점 5.0/5.0)"],
   ["ERP·전표 시스템 API 연동,", "Python 스케줄러 기반 업무 자동화 설계"],
@@ -119,6 +130,7 @@ export default function Home() {
           "Inter,Pretendard,'Helvetica Neue',Helvetica,Arial,sans-serif",
         height: "100dvh",
         overflowY: "auto",
+        overflowX: "hidden",
         scrollSnapType: "y mandatory",
         padding: "0 28px",
       }}
@@ -126,24 +138,43 @@ export default function Home() {
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
         {/* Screen 1 — Hero */}
         <ScreenSection>
-          <header className="hero-header" style={{ paddingTop: 40 }}>
+          <section
+            style={{
+              position: "relative",
+              left: "50%",
+              width: "100vw",
+              transform: "translateX(-50%)",
+              minHeight: "100dvh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+              padding: "120px 28px 40px",
+              overflow: "hidden",
+              background: "#08080A",
+              color: "#F5F5F7",
+            }}
+          >
             <div
               style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 2,
+                padding: "22px 28px",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "baseline",
-                flexWrap: "wrap",
                 gap: 24,
-                paddingBottom: 22,
-                borderBottom: "1px solid #0A0A0A",
               }}
             >
               <div
                 style={{
                   fontSize: 11,
-                  fontWeight: 500,
+                  fontWeight: 600,
                   letterSpacing: ".34em",
                   textTransform: "uppercase",
+                  color: "#F5F5F7",
                 }}
               >
                 Lumain
@@ -154,105 +185,211 @@ export default function Home() {
                   fontWeight: 400,
                   letterSpacing: ".34em",
                   textTransform: "uppercase",
-                  color: "#8A8A8A",
+                  color: "#8A8A92",
                 }}
               >
                 Portfolio — 2026
               </div>
             </div>
-          </header>
 
-          <div
-            style={{
-              flex: "1 1 auto",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <div
-              className="hero-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0,6fr) minmax(0,4fr)",
-                gap: "40px 48px",
-                alignItems: "start",
-              }}
-            >
-              <h1
+            <div style={{ position: "absolute", inset: "-12% 0", zIndex: 0 }}>
+              <img
+                src="/img/hero-slab.jpg"
+                alt=""
                 style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(36px,6.6vw,68px)",
-                  lineHeight: 0.95,
-                  letterSpacing: "-.045em",
-                  margin: 0,
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  filter: "grayscale(1) brightness(.3) blur(7px)",
+                  transform: "scale(1.08)",
                 }}
-              >
-                AI 서비스를
-                <br />
-                혼자
-                <br />
-                끝까지
-                <br />
-                만듭니다
-              </h1>
+              />
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 14,
-                  marginTop: "calc(clamp(36px,6.6vw,68px) * .95 * 2)",
-                }}
+                className="home-hero-reveal"
+                style={{ position: "absolute", inset: 0, overflow: "hidden" }}
               >
-                <ImageBox
+                <img
                   src="/img/hero-slab.jpg"
-                  alt="히어로 이미지"
-                  fit="cover"
-                  className="hero-image-box"
-                  containerStyle={{
+                  alt=""
+                  style={{
                     width: "100%",
-                    aspectRatio: "3/4",
-                    boxShadow: "0 32px 64px rgba(10,10,10,.22)",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    filter: "grayscale(1) contrast(1.08) brightness(.56)",
                   }}
                 />
-                <p
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(180deg,rgba(8,8,10,.82) 0%,rgba(8,8,10,.34) 42%,rgba(8,8,10,.94) 100%)",
+                }}
+              />
+            </div>
+
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1,
+                maxWidth: 1320,
+                margin: "0 auto",
+                width: "100%",
+              }}
+            >
+              <div style={{ overflow: "hidden", marginBottom: 10 }}>
+                <div
+                  className="home-hero-eyebrow"
                   style={{
-                    fontWeight: 400,
-                    fontSize: 15,
-                    lineHeight: 1.6,
+                    fontSize: 11,
+                    fontWeight: 500,
+                    letterSpacing: ".42em",
+                    textTransform: "uppercase",
+                    color: "#9A9AA2",
+                  }}
+                >
+                  Planning · Development · Deployment
+                </div>
+              </div>
+              <h1
+                style={{
+                  margin: "0 0 40px",
+                  fontWeight: 800,
+                  fontSize: "clamp(42px,8.6vw,124px)",
+                  lineHeight: 0.96,
+                  letterSpacing: "-.05em",
+                }}
+              >
+                <span style={{ display: "block", overflow: "hidden" }}>
+                  <span
+                    className="home-hero-line home-hero-line-1"
+                    style={{ display: "block" }}
+                  >
+                    AI 서비스를
+                  </span>
+                </span>
+                <span style={{ display: "block", overflow: "hidden" }}>
+                  <span
+                    className="home-hero-line home-hero-line-2"
+                    style={{ display: "block" }}
+                  >
+                    혼자 끝까지
+                  </span>
+                </span>
+                <span style={{ display: "block", overflow: "hidden" }}>
+                  <span
+                    className="home-hero-line home-hero-line-3"
+                    style={{ display: "block" }}
+                  >
+                    만듭니다
+                  </span>
+                </span>
+              </h1>
+              <div
+                className="stack-mobile"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+                  gap: "24px 64px",
+                  alignItems: "end",
+                  paddingTop: 24,
+                  borderTop: "1px solid rgba(245,245,247,.18)",
+                }}
+              >
+                <p
+                  className="home-hero-lede"
+                  style={{
                     margin: 0,
-                    color: "#1F1F1F",
+                    fontWeight: 400,
+                    fontSize: 17,
+                    lineHeight: 1.8,
+                    color: "#C9C9D0",
+                    maxWidth: 460,
                   }}
                 >
                   AI 서비스 기획부터 개발, 배포까지 원스톱으로 해내는 1인
                   스타트업 대표 겸 웹 개발자입니다.
                 </p>
+                <div
+                  className="home-hero-contact"
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px 28px",
+                    fontSize: 14,
+                    fontWeight: 400,
+                    letterSpacing: ".02em",
+                    color: "#C9C9D0",
+                  }}
+                >
+                  <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
+                  <a
+                    href="mailto:lumain747@gmail.com"
+                    style={{ color: "#C9C9D0", whiteSpace: "nowrap" }}
+                  >
+                    lumain747@gmail.com
+                  </a>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
+                    gap: 12,
+                    fontSize: 10,
+                    fontWeight: 500,
+                    letterSpacing: ".28em",
+                    color: "#8A8A92",
+                  }}
+                >
+                  <span style={{ whiteSpace: "nowrap" }}>SCROLL</span>
+                  <span
+                    className="home-hero-cue-bar"
+                    style={{
+                      display: "block",
+                      width: 1,
+                      height: 34,
+                      background: "linear-gradient(180deg,#8A8A92,transparent)",
+                    }}
+                  />
+                </div>
               </div>
             </div>
+          </section>
 
+          <div
+            style={{
+              position: "relative",
+              left: "50%",
+              width: "100vw",
+              transform: "translateX(-50%)",
+              borderBottom: "1px solid #DEDEDE",
+              padding: "16px 0",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
             <div
-              className="hero-contact-row"
+              className="home-ticker-track"
               style={{
-                marginTop: 56,
-                paddingTop: 32,
-                borderTop: "1px solid #DEDEDE",
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "12px 48px",
-                fontSize: 15,
-                fontWeight: 400,
-                letterSpacing: ".02em",
-                color: "#333333",
+                display: "inline-flex",
+                gap: 56,
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: ".24em",
+                color: "#555555",
               }}
             >
-              <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
-              <a
-                href="mailto:lumain747@gmail.com"
-                style={{ color: "#333333", whiteSpace: "nowrap" }}
-              >
-                lumain747@gmail.com
-              </a>
-              <span style={{ whiteSpace: "nowrap" }}>루메인 (Lumain)</span>
+              {[...TECH_STACK, ...TECH_STACK].map((tech, i) => (
+                <span key={i} style={{ whiteSpace: "nowrap" }}>
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         </ScreenSection>
