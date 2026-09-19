@@ -329,26 +329,6 @@ export default function Home() {
                   스타트업 대표 겸 웹 개발자입니다.
                 </p>
                 <div
-                  className="home-hero-contact"
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "8px 28px",
-                    fontSize: 14,
-                    fontWeight: 400,
-                    letterSpacing: ".02em",
-                    color: "#C9C9D0",
-                  }}
-                >
-                  <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
-                  <a
-                    href="mailto:lumain747@gmail.com"
-                    style={{ color: "#C9C9D0", whiteSpace: "nowrap" }}
-                  >
-                    lumain747@gmail.com
-                  </a>
-                </div>
-                <div
                   style={{
                     display: "flex",
                     justifyContent: "flex-end",

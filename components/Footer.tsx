@@ -26,29 +26,22 @@ export default function Footer({ marginTop, showName = false }: FooterProps) {
       >
         Lumain
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 10,
-          fontSize: 15,
-          fontWeight: 400,
-          letterSpacing: ".02em",
-          color: "#333333",
-          alignSelf: "end",
-        }}
-      >
-        <span style={{ whiteSpace: "nowrap" }}>050-007-3713</span>
-        <a
-          href="mailto:lumain747@gmail.com"
-          style={{ color: "#333333", whiteSpace: "nowrap" }}
+      {showName ? (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+            fontSize: 15,
+            fontWeight: 400,
+            letterSpacing: ".02em",
+            color: "#333333",
+            alignSelf: "end",
+          }}
         >
-          lumain747@gmail.com
-        </a>
-        {showName ? (
           <span style={{ whiteSpace: "nowrap" }}>루메인 (Lumain)</span>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </footer>
   );
 }
