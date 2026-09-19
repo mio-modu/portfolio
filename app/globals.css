@@ -130,10 +130,6 @@ img {
     animation: om-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.62s both;
   }
 
-  .home-hero-contact {
-    animation: om-fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) 0.76s both;
-  }
-
   .home-hero-cue-bar {
     animation: om-cue 2.2s ease-in-out infinite;
   }
