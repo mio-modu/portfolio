@@ -685,7 +685,49 @@ export default function Home() {
           />
         </ScreenSection>
 
-        {/* Screen 7 — Also + Footer */}
+        {/* Screen 7 — Work 06 */}
+        <ScreenSection>
+          <WorkItem
+            href="/work/mungspot"
+            label="06 / PETCARE"
+            title="멍스팟"
+            desc="사진으로 견종을 알아보고 필요한 병원·미용샵으로 잇는 반려견 케어 플랫폼"
+            image={
+              <div
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/7",
+                  background: "#F0F0F0",
+                  display: "flex",
+                  gap: 2,
+                  overflow: "hidden",
+                }}
+              >
+                {[
+                  ["/img/mungspot-home.jpg", "홈 — 견종 찾기"],
+                  ["/img/mungspot-breed.jpg", "견종 카드"],
+                  ["/img/mungspot-pet.jpg", "우리 아이 기록"],
+                  ["/img/mungspot-dressup.jpg", "AI 착용기"],
+                ].map(([src, alt]) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt={alt}
+                    style={{
+                      flex: 1,
+                      minWidth: 0,
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                    }}
+                  />
+                ))}
+              </div>
+            }
+          />
+        </ScreenSection>
+
+        {/* Screen 8 — Also + Footer */}
         <ScreenSection gap={64}>
           <section>
             <div
