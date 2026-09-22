@@ -434,6 +434,8 @@ export default function MungspotPage() {
               "PORTONE V2",
               "PWA",
             ]}
+            href="https://meongspot.com"
+            label="meongspot.com"
           />
         </section>
 
