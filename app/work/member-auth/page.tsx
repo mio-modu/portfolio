@@ -398,7 +398,7 @@ export default function MemberAuthPage() {
 
         <DetailNav
           prev={{ href: "/work/websites", label: "← 이전 · 웹사이트 제작" }}
-          next={{ href: "/", label: "전체 목록 →" }}
+          next={{ href: "/work/mungspot", label: "다음 · 멍스팟 →" }}
         />
 
         <Footer marginTop={140} />
