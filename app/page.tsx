@@ -728,7 +728,29 @@ export default function Home() {
           />
         </ScreenSection>
 
-        {/* Screen 8 — Also + Footer */}
+        <ScreenSection>
+          <WorkItem
+            href="/work/design-system"
+            label="07 / SYSTEM"
+            title="웹디자인 유형 시스템"
+            desc="서비스 833건을 시각 유형으로 분류하고, 유형마다 팔레트·구도·입체를 수치로 고정한 자체 도구"
+            image={
+              <img
+                src="/img/ds-strip.jpg"
+                alt="10개 유형을 각각 다른 서비스에 적용한 결과 — 판타지 일러스트, UI 패널 캡처, 커머스 상세, 마스코트, 문서 캡처, 게임 배지, 프로세스 다이어그램, 형광 타이포, 스탯, 모노 심볼"
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/7",
+                  objectFit: "cover",
+                  display: "block",
+                  background: "#F0F0F0",
+                }}
+              />
+            }
+          />
+        </ScreenSection>
+
+        {/* Screen 9 — Also + Footer */}
         <ScreenSection gap={64}>
           <section>
             <div
