@@ -706,7 +706,8 @@ export default function Home() {
                 {[
                   ["/img/mungspot-home.jpg", "홈 — 견종 찾기"],
                   ["/img/mungspot-breed.jpg", "견종 카드"],
-                  ["/img/mungspot-pet.jpg", "우리 아이 기록"],
+                  ["/img/mungspot-shoplist.jpg", "근처 샵 목록"],
+                  ["/img/mungspot-shop.jpg", "업체 상세 — 예약 요청"],
                   ["/img/mungspot-dressup.jpg", "AI 착용기"],
                 ].map(([src, alt]) => (
                   <img

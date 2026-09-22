@@ -21,8 +21,22 @@ const FLOW_SHOTS = [
 ];
 
 const BIZ_SHOTS = [
-  { src: "/img/mungspot-dressup.jpg", alt: "AI 댕댕이 착용기", marginTop: 0 },
-  { src: "/img/mungspot-pricing.jpg", alt: "요금제 — 견주·샵 구분", marginTop: 44 },
+  {
+    src: "/img/mungspot-shoplist.jpg",
+    alt: "지도 — 근처 샵 목록과 업종 필터",
+    marginTop: 0,
+  },
+  {
+    src: "/img/mungspot-shop.jpg",
+    alt: "업체 상세 — 예약 요청 보내기",
+    marginTop: 44,
+  },
+  { src: "/img/mungspot-dressup.jpg", alt: "AI 댕댕이 착용기", marginTop: 88 },
+  {
+    src: "/img/mungspot-pricing.jpg",
+    alt: "요금제 — 견주·샵 구분",
+    marginTop: 132,
+  },
 ];
 
 const PILLARS = [
@@ -43,6 +57,7 @@ const PILLARS = [
     desc: "판별 결과에 따라 지도 탭 순서를 다시 매기고 왜 그 순서인지 이유를 함께 보여줍니다. 샵이 등록한 강점 태그와 자동으로 이어 붙습니다.",
     points: [
       "이중모 견종이면 미용샵을, 노령견이면 동물병원을 먼저",
+      "업종 필터(동물병원·미용샵·호텔·용품점)와 목록·지도 연동",
       "지도·검색·업체 상세는 로그인 없이 공개",
     ],
   },
