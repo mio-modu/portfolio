@@ -18,6 +18,8 @@ type Sample = {
   id: string;
   name: string;
   img: string;
+  /** 움직임이 요점인 항목만. 있으면 정지 이미지 대신 이 영상을 재생한다 */
+  video?: string;
   subject: string;
   rule: string;
   did: string;
@@ -107,6 +109,7 @@ const GROUPS: { layers: string; head: string; lede: string; items: Sample[] }[] 
           id: "T24",
           name: "세 컷이 이어지는 화면",
           img: "/img/ds-t24c.jpg",
+          video: "/img/ds-t24c",
           subject: "스민 — 신안 천일염",
           rule: "사진 한 컷 → 카드 한 장 → 사진 한 컷 · 카드는 언제나 한 장 · 자동 전환 금지",
           did: "사진 세 장이 스크롤에 맞춰 한 화면씩 딱 걸리며 넘어갑니다. 자동으로 넘기는 슬라이드쇼는 이 스타일에서 금지라, 보는 사람이 속도를 정하게 했습니다. 읽기도 전에 다음으로 넘어가는 답답함이 없습니다. 카메라 움직임을 컷마다 다르게 줬습니다 — 넓은 염전은 천천히 다가가고, 결정이 서는 바닥은 왼쪽에서 오른쪽으로 훑고, 창고는 아주 느리게 흐릅니다. 카드 자리도 좌하·우하·좌중으로 옮겨 같은 곳에 반복되지 않게 했습니다.",
@@ -273,12 +276,44 @@ function GroupBlock({ g }: { g: (typeof GROUPS)[number] }) {
       <div style={{ display: "flex", flexDirection: "column", gap: 56 }}>
         {g.items.map((s) => (
           <article key={s.id}>
-            <ImageBox
-              src={s.img}
-              alt={`${s.id} ${s.name} — ${s.subject}`}
-              fit="cover"
-              containerStyle={{ width: "100%", aspectRatio: "16/10" }}
-            />
+            {s.video ? (
+              <div
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/10",
+                  background: "#F0F0F0",
+                  overflow: "hidden",
+                }}
+              >
+                {/* 움직임이 요점인 항목이라 정지 이미지로는 전달되지 않는다.
+                    소리 없이 반복 재생하고, 재생이 막히면 포스터가 남는다. */}
+                <video
+                  poster={s.img}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={`${s.id} ${s.name} — ${s.subject}. 세 컷이 스크롤에 맞춰 넘어가는 화면 녹화`}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                >
+                  <source src={`${s.video}.webm`} type="video/webm" />
+                  <source src={`${s.video}.mp4`} type="video/mp4" />
+                </video>
+              </div>
+            ) : (
+              <ImageBox
+                src={s.img}
+                alt={`${s.id} ${s.name} — ${s.subject}`}
+                fit="cover"
+                containerStyle={{ width: "100%", aspectRatio: "16/10" }}
+              />
+            )}
             <div
               className="stack-mobile"
               style={{
