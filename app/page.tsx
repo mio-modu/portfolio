@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import ImageBox from "@/components/ImageBox";
 import Footer from "@/components/Footer";
+import { SHOW_BRAND, WORDMARK } from "@/components/brand";
 
 const TECH_STACK = [
   "NEXT.JS",
@@ -181,17 +182,19 @@ export default function Home() {
                 gap: 24,
               }}
             >
-              <div
-                style={{
-                  fontSize: 11,
-                  fontWeight: 600,
-                  letterSpacing: ".34em",
-                  textTransform: "uppercase",
-                  color: "#F5F5F7",
-                }}
-              >
-                Lumain
-              </div>
+              {SHOW_BRAND ? (
+                <div
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 600,
+                    letterSpacing: ".34em",
+                    textTransform: "uppercase",
+                    color: "#F5F5F7",
+                  }}
+                >
+                  {WORDMARK}
+                </div>
+              ) : null}
               <div
                 style={{
                   fontSize: 11,

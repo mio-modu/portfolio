@@ -1,3 +1,5 @@
+import { WORDMARK, BRAND_KO } from "./brand";
+
 type FooterProps = {
   marginTop: number;
   showName?: boolean;
@@ -24,9 +26,9 @@ export default function Footer({ marginTop, showName = false }: FooterProps) {
           letterSpacing: "-.045em",
         }}
       >
-        Lumain
+        {WORDMARK}
       </div>
-      {showName ? (
+      {showName && BRAND_KO ? (
         <div
           style={{
             display: "flex",
@@ -39,7 +41,7 @@ export default function Footer({ marginTop, showName = false }: FooterProps) {
             alignSelf: "end",
           }}
         >
-          <span style={{ whiteSpace: "nowrap" }}>루메인 (Lumain)</span>
+          <span style={{ whiteSpace: "nowrap" }}>{BRAND_KO}</span>
         </div>
       ) : null}
     </footer>
