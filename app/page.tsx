@@ -733,7 +733,7 @@ export default function Home() {
             href="/work/design-system"
             label="07 / SYSTEM"
             title="웹디자인 스타일 시스템"
-            desc="실제 서비스 833곳의 화면을 보고 23가지 스타일로 나눈 뒤, 스타일마다 색·배치·그림자를 숫자로 정해 둔 자체 도구. 아래는 같은 시스템에서 스타일만 바꿔 만든 16벌"
+            desc="실제 서비스 833곳의 화면을 보고 25가지 스타일로 나눈 뒤, 스타일마다 색·배치·그림자를 숫자로 정해 둔 자체 도구. 아래는 같은 시스템에서 스타일만 바꿔 만든 19벌"
             image={
               <img
                 src="/img/ds-strip.jpg"
