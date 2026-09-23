@@ -732,8 +732,8 @@ export default function Home() {
           <WorkItem
             href="/work/design-system"
             label="07 / SYSTEM"
-            title="웹디자인 유형 시스템"
-            desc="서비스 833건을 시각 유형으로 분류하고, 유형마다 팔레트·구도·입체·이미지 처리를 수치로 고정한 자체 도구. 아래는 같은 시스템에서 유형만 바꿔 만든 16벌"
+            title="웹디자인 스타일 시스템"
+            desc="실제 서비스 833곳의 화면을 보고 23가지 스타일로 나눈 뒤, 스타일마다 색·배치·그림자를 숫자로 정해 둔 자체 도구. 아래는 같은 시스템에서 스타일만 바꿔 만든 16벌"
             image={
               <img
                 src="/img/ds-strip.jpg"
