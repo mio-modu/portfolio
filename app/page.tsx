@@ -590,55 +590,22 @@ export default function Home() {
         {/* Screen 5 — Work 04 */}
         <ScreenSection>
           <WorkItem
-            href="/work/websites"
-            label="04 / WEB"
-            title="웹사이트 제작"
-            desc="실제 운영 3종 · 비영리·공공기관 시안 4종"
+            href="/work/design-system"
+            label="04 / SYSTEM"
+            title="웹디자인 스타일 시스템"
+            desc="실제 서비스와 기업 사이트 1,538곳의 화면을 보고 25가지 스타일로 나눈 뒤, 스타일마다 색·배치·그림자를 숫자로 정해 둔 자체 도구. 아래는 같은 시스템에서 스타일만 바꿔 만든 20벌"
             image={
-              <div
+              <img
+                src="/img/ds-strip.jpg"
+                alt="16개 유형을 각각 다른 서비스에 적용한 결과 — 시네마틱 씬, 판타지 일러스트, 하이프 배너, 무광 3D 정물, 클레이 마스코트, 아날로그 접사, 데이터 지도, 게임 배지, 커머스 상세, 캐릭터 안내, UI 패널 캡처, 문서 캡처, 형광 타이포, 프로세스 다이어그램, 스탯, 모노 심볼"
                 style={{
                   width: "100%",
                   aspectRatio: "16/7",
+                  objectFit: "cover",
+                  display: "block",
                   background: "#F0F0F0",
-                  display: "flex",
-                  gap: 2,
-                  overflow: "hidden",
                 }}
-              >
-                <img
-                  src="/img/site-qsarang.png"
-                  alt="큐사랑"
-                  style={{
-                    flex: 1,
-                    minWidth: 0,
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                  }}
-                />
-                <img
-                  src="/img/site-hanbok.png"
-                  alt="우아한한복대여점"
-                  style={{
-                    flex: 1,
-                    minWidth: 0,
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                  }}
-                />
-                <img
-                  src="/img/site-brownie.png"
-                  alt="그린브라우니"
-                  style={{
-                    flex: 1,
-                    minWidth: 0,
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                  }}
-                />
-              </div>
+              />
             }
           />
         </ScreenSection>
@@ -730,22 +697,55 @@ export default function Home() {
 
         <ScreenSection>
           <WorkItem
-            href="/work/design-system"
-            label="07 / SYSTEM"
-            title="웹디자인 스타일 시스템"
-            desc="실제 서비스와 기업 사이트 1,538곳의 화면을 보고 25가지 스타일로 나눈 뒤, 스타일마다 색·배치·그림자를 숫자로 정해 둔 자체 도구. 아래는 같은 시스템에서 스타일만 바꿔 만든 20벌"
+            href="/work/websites"
+            label="07 / WEB"
+            title="웹사이트 제작"
+            desc="실제 운영 3종 · 비영리·공공기관 시안 4종"
             image={
-              <img
-                src="/img/ds-strip.jpg"
-                alt="16개 유형을 각각 다른 서비스에 적용한 결과 — 시네마틱 씬, 판타지 일러스트, 하이프 배너, 무광 3D 정물, 클레이 마스코트, 아날로그 접사, 데이터 지도, 게임 배지, 커머스 상세, 캐릭터 안내, UI 패널 캡처, 문서 캡처, 형광 타이포, 프로세스 다이어그램, 스탯, 모노 심볼"
+              <div
                 style={{
                   width: "100%",
                   aspectRatio: "16/7",
-                  objectFit: "cover",
-                  display: "block",
                   background: "#F0F0F0",
+                  display: "flex",
+                  gap: 2,
+                  overflow: "hidden",
                 }}
-              />
+              >
+                <img
+                  src="/img/site-qsarang.png"
+                  alt="큐사랑"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+                <img
+                  src="/img/site-hanbok.png"
+                  alt="우아한한복대여점"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+                <img
+                  src="/img/site-brownie.png"
+                  alt="그린브라우니"
+                  style={{
+                    flex: 1,
+                    minWidth: 0,
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
+              </div>
             }
           />
         </ScreenSection>

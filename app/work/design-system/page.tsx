@@ -351,7 +351,7 @@ export default function DesignSystemPage() {
       }}
     >
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
-        <DetailHeader label="07 / SYSTEM" />
+        <DetailHeader label="04 / SYSTEM" />
 
         <section style={{ padding: "72px 0 0" }}>
           <div
@@ -598,8 +598,11 @@ export default function DesignSystemPage() {
         />
 
         <DetailNav
-          prev={{ href: "/work/mungspot", label: "06 / 멍스팟" }}
-          next={{ href: "/work/modelcut", label: "01 / 모델 착용컷 생성기" }}
+          prev={{ href: "/work/gamsadam", label: "← 이전 · 감사담" }}
+          next={{
+            href: "/work/member-auth",
+            label: "다음 · 자격 인증형 회원제 시스템 →",
+          }}
         />
         <Footer marginTop={140} />
       </div>
