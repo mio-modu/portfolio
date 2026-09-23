@@ -246,7 +246,10 @@ export default function GamsadamPage() {
 
         <DetailNav
           prev={{ href: "/work/modelcut", label: "← 이전 · 착용컷 생성기" }}
-          next={{ href: "/work/websites", label: "다음 · 웹사이트 제작 →" }}
+          next={{
+            href: "/work/design-system",
+            label: "다음 · 웹디자인 스타일 시스템 →",
+          }}
         />
 
         <Footer marginTop={140} />

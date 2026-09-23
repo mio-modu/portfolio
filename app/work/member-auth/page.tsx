@@ -397,7 +397,10 @@ export default function MemberAuthPage() {
         </section>
 
         <DetailNav
-          prev={{ href: "/work/websites", label: "← 이전 · 웹사이트 제작" }}
+          prev={{
+            href: "/work/design-system",
+            label: "← 이전 · 웹디자인 스타일 시스템",
+          }}
           next={{ href: "/work/mungspot", label: "다음 · 멍스팟 →" }}
         />
 

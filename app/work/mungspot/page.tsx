@@ -444,7 +444,7 @@ export default function MungspotPage() {
             href: "/work/member-auth",
             label: "← 이전 · 자격 인증형 회원제 시스템",
           }}
-          next={{ href: "/", label: "전체 목록 →" }}
+          next={{ href: "/work/websites", label: "다음 · 웹사이트 제작 →" }}
         />
 
         <Footer marginTop={140} />

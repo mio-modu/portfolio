@@ -100,7 +100,7 @@ export default function WebsitesPage() {
       }}
     >
       <div style={{ maxWidth: 1320, margin: "0 auto" }}>
-        <DetailHeader label="04 / WEB" />
+        <DetailHeader label="07 / WEB" />
 
         <section style={{ paddingTop: 120 }}>
           <h1
@@ -417,8 +417,8 @@ export default function WebsitesPage() {
         </section>
 
         <DetailNav
-          prev={{ href: "/work/gamsadam", label: "← 이전 · 감사담" }}
-          next={{ href: "/work/member-auth", label: "다음 · 자격 인증형 회원제 시스템 →" }}
+          prev={{ href: "/work/mungspot", label: "← 이전 · 멍스팟" }}
+          next={{ href: "/", label: "전체 목록 →" }}
         />
 
         <Footer marginTop={140} />
