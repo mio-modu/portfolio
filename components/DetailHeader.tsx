@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HOME_LABEL } from "./brand";
 
 export default function DetailHeader({ label }: { label: string }) {
   return (
@@ -23,7 +24,7 @@ export default function DetailHeader({ label }: { label: string }) {
             textTransform: "uppercase",
           }}
         >
-          ← Lumain
+          {HOME_LABEL}
         </Link>
         <div
           style={{
